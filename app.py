@@ -12,17 +12,17 @@ import time
 # CONFIGURACIÓN
 # =======================
 
-GOOGLE_API_KEY = st.secrets["app"]["GOOGLE_API_KEY"]
-MONGODB_URI = st.secrets["app"]["MONGODB_URI"]
-COHERE_API_KEY = st.secrets["app"]["COHERE_API_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+MONGODB_URI = st.secrets["MONGODB_URI"]
+COHERE_API_KEY = st.secrets["COHERE_API_KEY"]
 
-B2_READ_KEY_ID = st.secrets["b2"]["B2_READ_KEY_ID"]
-B2_READ_APPLICATION_KEY = st.secrets["b2"]["B2_READ_APPLICATION_KEY"]
-B2_WRITE_KEY_ID = st.secrets["b2"]["B2_WRITE_KEY_ID"]
-B2_WRITE_APPLICATION_KEY = st.secrets["b2"]["B2_WRITE_APPLICATION_KEY"]
-B2_BUCKET_NAME = st.secrets["b2"]["B2_BUCKET_NAME"]
+B2_READ_KEY_ID = st.secrets["B2_READ_KEY_ID"]
+B2_READ_APPLICATION_KEY = st.secrets["B2_READ_APPLICATION_KEY"]
+B2_WRITE_KEY_ID = st.secrets["B2_WRITE_KEY_ID"]
+B2_WRITE_APPLICATION_KEY = st.secrets["B2_WRITE_APPLICATION_KEY"]
+B2_BUCKET_NAME = st.secrets["B2_BUCKET_NAME"]
 
-USER = st.secrets["app"].get("USER", "")
+USER = st.secrets.get("USER", "")
 
 if not GOOGLE_API_KEY or not MONGODB_URI:
     st.error("❌ Faltan GOOGLE_API_KEY o MONGODB_URI en secrets")
